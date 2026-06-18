@@ -1,11 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8" />
+  <title>Rutgers College Ave Power Map</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div id="header">
+    <h1>Rutgers College Ave Campus</h1>
+    <p>FY25 Electricity Usage by Building</p>
+  </div>
+
   <div id="map"></div>
+
+  <div id="legend">
+    <div class="legend-item"><span class="dot" style="background:#cc0033"></span>Academic</div>
+    <div class="legend-item"><span class="dot" style="background:#2b4570"></span>Administrative</div>
+    <div class="legend-item"><span class="dot" style="background:#f4a261"></span>Student Life</div>
+    <div class="legend-item"><span class="dot" style="background:#2a9d8f"></span>Residential</div>
+    <div class="legend-item"><span class="dot" style="background:#6c757d"></span>Utilities</div>
+  </div>
+
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="script.js"></script>
 </body>
