@@ -9,17 +9,37 @@
 <body>
   <div id="header">
     <h1>Rutgers College Ave Campus</h1>
-    <p>FY25 Electricity Usage by Building</p>
+    <p>FY25 Electricity Usage by Meter</p>
+    <div id="controls">
+      <button id="toggle-color">Color by Usage</button>
+      <select id="filter-category">
+        <option value="all">All Categories</option>
+        <option value="ACAD">Academic</option>
+        <option value="ADM">Administrative</option>
+        <option value="STLIF">Student Life</option>
+        <option value="RES">Residential</option>
+        <option value="SUPT">Utilities</option>
+      </select>
+      <select id="filter-usage">
+        <option value="all">All Usage</option>
+        <option value="low">&lt; 5,000 kWh</option>
+        <option value="medium">5,000–20,000 kWh</option>
+        <option value="high">20,000–100,000 kWh</option>
+        <option value="very_high">&gt; 100,000 kWh</option>
+      </select>
+    </div>
   </div>
 
   <div id="map"></div>
 
   <div id="legend">
-    <div class="legend-item"><span class="dot" style="background:#cc0033"></span>Academic</div>
-    <div class="legend-item"><span class="dot" style="background:#2b4570"></span>Administrative</div>
-    <div class="legend-item"><span class="dot" style="background:#f4a261"></span>Student Life</div>
-    <div class="legend-item"><span class="dot" style="background:#2a9d8f"></span>Residential</div>
-    <div class="legend-item"><span class="dot" style="background:#6c757d"></span>Utilities</div>
+    <div id="legend-items">
+      <div class="legend-item"><span class="dot" style="background:#cc0033"></span>Academic</div>
+      <div class="legend-item"><span class="dot" style="background:#2b4570"></span>Administrative</div>
+      <div class="legend-item"><span class="dot" style="background:#f4a261"></span>Student Life</div>
+      <div class="legend-item"><span class="dot" style="background:#2a9d8f"></span>Residential</div>
+      <div class="legend-item"><span class="dot" style="background:#6c757d"></span>Utilities</div>
+    </div>
   </div>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
